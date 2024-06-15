@@ -17,21 +17,21 @@ export default function Testimony(){
       slideNo: 1,
       name: "Eca Diaz",
       profile: "/images/testimonials/eca.jpg",
-      text: "Thank you TripinGo! Book your journey now for a comfortable and reliable transportation experience.",
+      text: "Thank you for accommodating our family for a simple celebration of my niece bday. The place so clean and cosy also have everything you need inside. Thank you si Ralf for smooth and easy to communication. hope to book with you again.",
       job: "business-woman"
     },
     {
       slideNo: 2,
       name: "Mark Alvarez",
       profile: "/images/testimonials/mark.jpg",
-      text: "Satifying transport service, I will never look on another ",
+      text: "great stay at Pousada Grande Staycation - residences was a safe place and has a mini mart just infront of the tower. cozy rooms and can fit 6 adults with 2 kids + 1 infant. highly recommended ",
       job: "financial coach"
     },
     {
       slideNo: 3,
       name: "Jamie Gellido",
       profile: "/images/testimonials/jamie.jpg",
-      text: "Very pleasant experience. Easy to reserve a trip online and received communication fast. Driver was friendly and polite a professional one.",
+      text: "The condo hotel is how Ralf described it: it had good air conditioning (a must in the Manila heat), the kitchen had everything you need, the building amenities were great. Our kids enjoyed the pool a lot. The place is near many great restaurants and near the airport. I recommend this place!.",
       job: "business owner"
     },
   ];
