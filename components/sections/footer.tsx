@@ -83,6 +83,7 @@ export default function Footer(){
       setLoading(false)
     }
   }
+
   return(
     <div id="footer" className="">
       <footer className="bg-gray-100 pt-12 relative bg-cover bg-center z-0 " style={{backgroundImage:"url(https://res.cloudinary.com/dh3h0lhyh/image/upload/v1717855760/pousada/rovhczyzqnbxmvgjcnvt.jpg)"}}>
@@ -248,19 +249,19 @@ export default function Footer(){
             <div className="container mx-auto px-4 bg-white z-10">
                 <div className="flex flex-col md:flex-row justify-between items-center mt-8 z-10">
                     <div className="text-gray-600">
-                      <h2 className='text-xl leading-10'>Pousada Grande Staycation</h2>
-                      <p className='text-xs'>Best City Staycation in Parañaque City, Manila</p>
+                      <h2 className='text-xl leading-10'>{siteinfo.sitename}</h2>
+                      <p className='text-xs'>{siteinfo.description}</p>
                     </div>
                     <div className="flex space-x-4 mt-4 md:mt-0">
                         <h4>follow us:</h4>
-                        <a href={siteinfo[0].fb} target='_blank' className="text-gray-600 hover:text-gray-900"><Facebook /></a>
-                        <a href={siteinfo[0].airbnb} className="text-gray-600 hover:text-gray-900"><MapPin /></a>
+                        <a href={siteinfo.fb} target='_blank' className="text-gray-600 hover:text-gray-900"><Facebook /></a>
+                        <a href={siteinfo.airbnb} className="text-gray-600 hover:text-gray-900"><MapPin /></a>
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center z-10 mt-7 text-xs">
                     <div className="flex gap-x-7 items-center z-10 ml-0">
-                        <p className="text-gray-600">© Pousada. All Rights Reserved { formatDate(Date(),'yyyy' )}</p>
-                        <p className="text-gray-600">Web develop by <a href='#'>Ralf Quezar De Leon</a></p>
+                        <p className="text-gray-600">© {siteinfo.sitename}. All Rights Reserved { formatDate(Date(),'yyyy' )}</p>
+                        <p className="text-gray-600">Web develop by <a href='https://mybranches.net' target='_blank'>Ralf Quezar De Leon</a></p>
                     </div>
                     <div className="flex space-x-4 z-10">
                         <a href="#" className="text-gray-600 hover:text-gray-900">Rooms</a>

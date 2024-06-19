@@ -5,12 +5,13 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 
 import WebChat from "@/hooks/3x";
 import { Toaster } from "@/components/ui/toaster";
+import { siteinfo } from "@/siteinfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pousada Grande Staycation",
-  description: "Best Staycation on Paranaque, Manila!",
+  title: siteinfo.metaname,
+  description: siteinfo.description,
 };
 
 export default function RootLayout({
@@ -29,9 +30,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
         <WebChat />
-        <Toaster />
+        
       </body>
     </html>
   );

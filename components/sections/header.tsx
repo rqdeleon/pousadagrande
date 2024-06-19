@@ -79,12 +79,12 @@ export default function Header(){
     <header className="header-area">
         {/* Hero Section */}
         <MainNav />
-        <section className="bg-cover bg-center h-screen flex items-center justify-center" style={{backgroundImage:'url(https://res.cloudinary.com/dh3h0lhyh/image/upload/v1717848955/pousada/hero-banner.jpg)'}}>
+        <section className="relative overflow-hidden bg-cover bg-center h-screen flex items-center justify-center" style={{backgroundImage:'url(https://res.cloudinary.com/dh3h0lhyh/image/upload/v1717848955/pousada/hero-banner.jpg)'}}>
 
             <div className="z-10 text-center text-white px-6">
                 <h1 className="text-4xl md:text-6xl font-bold">Discover the art of luxury accommodation</h1>
                 <p className="mt-4 text-lg md:text-xl">From breathtaking views to exquisite furnishings, our accommodations redefine luxury and offer an experience beyond compare.</p>
-                <div className="mt-8 space-x-2 flex justify-center rounded-md bg-gray-200 p-7">
+                <div className="mt-8 space-x-2 flex justify-center rounded-md bg-gray-200/60 md:bg-gray-200 p-7">
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col md:flex-row w-full gap-5 items-center justify-center">
                       <FormField
@@ -198,7 +198,7 @@ export default function Header(){
                   </Form>
                 </div>
             </div>
-            <div className="absolute left-0 top-22 bg-gray-600 opacity-40 h-full w-full"></div>
+            <div className="absolute left-0 top-22 bg-gray-600 opacity-40 h-[120%] w-full"></div>
         </section>
       </header>
   )

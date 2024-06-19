@@ -44,20 +44,25 @@ export default function Features(){
 
     },
   ];
+  
   return(
     <section id="stay" className="relative h-screen flex items-center">
     <div className="container relative">
-      <div className="gap-x-11 relative px-5">
+      <div className="gap-x-11 relative pr-20">
         <h2 className="text-4xl font-bold mb-6 ">Immerse yourself in our featured suites</h2>
         <p className="mb-12">Experience a stay like no other as you immerse yourself in our featured rooms, carefully crafted to provide the perfect blend of comfort and luxury.</p>
       </div>       
         <div className="">
-          <Carousel opts={{align:"start"}} className="w-full">
+          <Carousel opts={{align:"start"}} className="w-full relative mt-9">
+              <div className="absolute -top-8 right-10">
+                <CarouselPrevious className="-left-9"/>
+                <CarouselNext className="-right-9" />
+              </div>
             <CarouselContent>
               {featureData.map((data)=>(
                 <CarouselItem key={data.slideNo} className="md:basis-3/4">
-                  <div className="relative overflow-hidden">
-                    <Image src={data.image} alt={data.title} className=" transition-all delay-150 w-full h-[450px] object-cover rounded-lg shadow-lg hover:scale-110" />
+                  <div className="relative overflow-hidden w-full min-h-[450px]">
+                    <Image src={data.image} alt={data.title} fill style={{objectFit:"cover"}} className=" transition-all delay-150 w-full h-[450px] object-cover rounded-lg shadow-lg hover:scale-110" />
                     <div className="absolute bottom-5 left-5 max-w-lg rounded-sm bg-secondary/85 p-8 bg-gray-900 text-secondary-foreground bg-opacity-50">
                       <h3 className="text-2xl font-bold">{data.title}</h3>
                       <p className="mt-2 text-sm">{data.descript}</p>
@@ -72,8 +77,6 @@ export default function Features(){
                 </CarouselItem>
               ))} 
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
         </div>
     </div>
